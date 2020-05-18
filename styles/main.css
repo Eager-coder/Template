@@ -292,8 +292,6 @@ header nav .nav-links .burger .line {
 }
 
 .services .grid .service .image {
-  background-size: cover;
-  background-position: top;
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
   display: block;
@@ -306,8 +304,8 @@ header nav .nav-links .burger .line {
   right: 0;
   z-index: 0;
   border-radius: 4px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .services .grid .service a {
@@ -342,6 +340,8 @@ header nav .nav-links .burger .line {
 .services .grid .service a .fa {
   color: orangered;
   font-size: 38.5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .services .grid .service a h4 {
@@ -358,7 +358,44 @@ header nav .nav-links .burger .line {
   background: transparent;
 }
 
-.services .grid .service:hover .image {
-  background-position: center;
+.services .grid .service:hover .fa {
+  color: white;
+  font-size: 42px;
+}
+
+.services2 {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.services2 .flex {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services2 .flex .flex-left {
+  width: 50%;
+}
+
+.services2 .flex .flex-left img {
+  width: 100%;
+}
+
+.services2 .flex .flex-right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
