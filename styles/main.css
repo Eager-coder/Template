@@ -28,6 +28,7 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   height: 5rem;
+  position: relative;
 }
 
 header nav .logo {
@@ -52,6 +53,7 @@ header nav .nav-links .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 70px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -83,6 +85,10 @@ header nav .nav-links .contact:hover {
 
 header nav .nav-links .burger {
   cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  z-index: 6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,11 +99,80 @@ header nav .nav-links .burger {
   margin-left: 20px;
 }
 
-header nav .nav-links .burger .line {
+header nav .nav-links .burger div {
   width: 25px;
   height: 2.2px;
   margin: 3px 0;
   background-color: black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .nav-links .burger .l1 {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+header nav .nav-links .burger .l2 {
+  opacity: 0;
+}
+
+header nav .nav-links .burger .l3 {
+  -webkit-transform: rotate(-45deg) translate(11px, -11.7px);
+          transform: rotate(-45deg) translate(11px, -11.7px);
+}
+
+header nav .nav-links .burger-active {
+  position: fixed;
+  left: 80%;
+}
+
+header .nav-slider {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  z-index: 5;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .nav-slider ul {
+  list-style: none;
+}
+
+header .nav-slider ul a {
+  color: black;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 0;
+  display: block;
+}
+
+header .nav-slider-active {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  position: fixed;
 }
 
 footer .footer-flex {

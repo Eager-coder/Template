@@ -34,6 +34,7 @@ header{
         justify-content: space-between;
         align-items: center;
         height: 5rem;
+        position: relative;
         .logo{
             font-size: 2.2rem;
             color: $dark;
@@ -46,6 +47,7 @@ header{
             align-items: center;
             .contact{
                 display: flex;
+                margin-right: 70px;
                 justify-content: center;
                 align-items: center;
                 width: 150px;
@@ -65,21 +67,74 @@ header{
                     color: whitesmoke;
                 }
             }
+           
             .burger{
                 cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 25px;
+                z-index: 6;
                 display: flex;
                 flex-direction: column;
                 margin-left: 20px;
-                .line{
+                div{
                     width: 25px ;
                     height: 2.2px;
                     margin: 3px 0;
                     background-color: black;
+                    transition: 0.3s;
+                }
+                .l1{
+                    transform: rotate(225deg);
+                }
+                .l2{
+                    opacity: 0;
+                }
+                .l3{
+                    transform: rotate(-45deg) translate(11px, -11.7px);
+                
                 }
             }
+            .burger-active{
+                position: fixed;
+                left: 80%;
+            }
+            
         }
         
     }
+    
+    .nav-slider{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0 ;left: 0; right: 0; bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 5;
+        transform: translateY(-100%);
+        transition: 0.3s;
+        ul{
+            list-style: none;
+                a{
+                    color: black;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    padding: 10px 0;
+                    display: block;
+                }
+        }
+      
+    }
+    .nav-slider-active{
+        transform: translateY(0%);
+        position: fixed;
+    }
+    
 }
 footer{
     .footer-flex{
