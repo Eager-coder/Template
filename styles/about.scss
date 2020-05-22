@@ -1,0 +1,188 @@
+@import 'common';
+.hero{
+    .hero-container{
+        max-width: 1200px;
+        width: 90%;
+        margin: 100px auto;
+        h1{
+            font-size: 3.2rem;
+            font-weight: 600;
+            max-width: 620px;
+            @include tablet(){
+                font-size: 2.5rem;
+            }
+            @include mobile(){
+                font-size: 1.7rem;
+            }
+        }
+        p{
+            font-size: 1.2rem;
+            max-width: 620px;
+            line-height: 1.5;
+            margin: 30px 0;
+            color: $grey;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 155px;
+            height: 60px;
+            border: rgba(89, 89, 189, 0.842) 1px solid;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: rgba(0, 0, 255, 0.788);
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.4s;
+            i{
+                transition: 0.4s;
+                margin-left: 10px;
+            }
+            &:hover{
+                background-color: #4c77e0;
+                color: white;
+                width: 160px;
+                i{
+                    transform: translateX(5px);
+                    
+                }
+            }
+        }
+    }
+}
+.facts{
+    background-color: #fafafa;
+
+    .flex{
+        display: flex;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 0;
+        @include tablet(){
+            flex-direction: column;
+            padding: 40px 0;
+        }
+        .flex-left{
+            width: 50%;
+            padding-right: 20px;
+            margin-top: 100px;
+            @include laptop(){
+                margin-top: 70px;
+            }
+            @include tablet(){
+               width: 100%;
+               margin: 20px 0 30px 0;
+            }
+            h2{
+                font-size: 2.2rem;
+                color: $dark;
+                font-weight: 600;
+                @include tablet(){
+                    margin-bottom: 10px;
+                    font-size: 2rem;
+                }
+            }
+            p{
+                color: $grey;
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
+        }
+        .flex-right-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            width: 50%;
+            @include tablet(){
+                width: 100%;
+             }
+            .box{
+                width: 100%;
+                height: 200px;
+                padding: 20px;
+                display: flex;
+                
+                align-items: center;
+                flex-direction: column;
+                box-shadow: 1px 5px 7.5px  #C4C4C433;
+                border-radius: 7px ;
+                background-color: white;
+                i{
+                    color: orangered;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #f1f6f5;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 100%;
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                }
+                h4{
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+}
+.vision{
+    background-color: #ffffff;
+    padding: 80px 0;
+    @include tablet(){
+        padding: 40px;
+    }
+    .container{
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include laptop(){
+            justify-content: center;
+        }
+        @include tablet(){
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+        h2{
+            width: 350px;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        p{
+            font-size: 1.1rem;
+            max-width: 620px;
+            line-height: 1.5;
+            color: $grey;
+            @include laptop(){
+                width: 450px;
+            }
+        }
+    }
+}
+.features{
+    .feature-containter{
+        .feature{
+            display: flex;
+            .text{
+                width: 50%
+            }
+            .image{
+                
+            }
+        }
+    }
+}
