@@ -698,7 +698,7 @@ footer .footer-bottom .links a {
 
 @media screen and (max-width: 770px) {
   .vision {
-    padding: 40px;
+    padding: 40px 0;
   }
 }
 
@@ -749,6 +749,12 @@ footer .footer-bottom .links a {
   font-weight: 600;
 }
 
+@media screen and (max-width: 480px) {
+  .vision .container h2 {
+    width: 100%;
+  }
+}
+
 .vision .container p {
   font-size: 1.1rem;
   max-width: 620px;
@@ -759,6 +765,12 @@ footer .footer-bottom .links a {
 @media screen and (max-width: 1000px) {
   .vision .container p {
     width: 450px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .vision .container p {
+    width: 100%;
   }
 }
 
@@ -894,9 +906,10 @@ footer .footer-bottom .links a {
 
 .team .carousel-container {
   margin: 80px auto;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 480px) {
@@ -910,6 +923,7 @@ footer .footer-bottom .links a {
   position: absolute;
   top: 30%;
   cursor: pointer;
+  z-index: 1;
 }
 
 .team .carousel-container .chevron-left {
